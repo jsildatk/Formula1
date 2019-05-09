@@ -1,0 +1,313 @@
+engines:before {
+    display: block;
+    content: "Engines: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+
+engines engine:before {
+    display: block;
+    content: "Id: " attr(id);
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(33, 128, 96);
+}
+
+engine manufacter:before {
+    color: rgb(65, 16, 16);
+    font-size: 120%;
+    content: "Manufacter: ";
+    font-style: italic;
+}
+
+engine ice:before, engine hybrid:before {
+    display: block;
+    color: grey;
+    font-size: 120%;
+}
+
+engine ice:before {
+    content: "\00a0 ICE: ";
+}
+
+engine:after, engine ice displacement:after, engine ice cylinders:after, engine ice horse_power:after, engine ice max_rpm:after, engine hybrid mgu-k power:after, engine hybrid mgu-k max_rpm:after, engine hybrid mgu-k recovered_energy:after, engine hybrid mgu-k released_energy:after, engine hybrid mgu-h max_rpm:after {
+    content: "\A";
+    white-space: pre;
+}
+
+engine ice displacement:before, engine ice cylinders:before, engine ice horse_power:before, engine ice max_rpm:before {
+    color: rgb(165, 113, 113);
+    font-size: 110%;
+}
+
+engine ice displacement:before {
+    content: "\00a0 \00a0 Displacement: "
+}
+
+engine ice cylinders:before {
+    content: "\00a0 \00a0 Cylinders: "
+}
+
+engine ice horse_power:before {
+    content: "\00a0 \00a0 Horse power: "
+}
+
+engine ice max_rpm:before {
+    content: "\00a0 \00a0 Max rpm: "
+}
+
+engine hybrid:before {
+    content: "\00a0 HYBRID: ";
+}
+
+engine hybrid mgu-k:before, engine hybrid mgu-h:before {
+    display: block;
+    color: rgb(105, 52, 52);
+    font-size: 110%;
+}
+
+engine hybrid mgu-k:before {
+    content: "\00a0 \00a0 MGU-K: ";
+}
+
+engine hybrid mgu-k power:before, engine hybrid mgu-k max_rpm:before, engine hybrid mgu-h max_rpm:before, engine hybrid mgu-k recovered_energy:before, engine hybrid mgu-k released_energy:before, engine hybrid mgu-h recovered_energy:before {
+    color: rgb(165, 113, 113);
+    font-size: 110%;
+}
+
+engine hybrid mgu-k power:before {
+    content: "\00a0 \00a0 \00a0 Power (" attr(unit) "): ";
+}
+
+engine hybrid mgu-k max_rpm:before, engine hybrid mgu-h max_rpm:before {
+    content: "\00a0 \00a0 \00a0 Max rpm: "
+}
+
+engine hybrid mgu-k recovered_energy:before {
+    content: "\00a0 \00a0 \00a0 Recovered energy (" attr(unit) "): ";
+}
+
+engine hybrid mgu-k released_energy:before {
+    content: "\00a0 \00a0 \00a0 Released energy (" attr(unit) "): ";
+}
+
+engine hybrid mgu-h:before {
+    content: "\00a0 \00a0 MGU-H: ";
+}
+
+engine hybrid mgu-h recovered_energy:before {
+    content: "\00a0 \00a0 \00a0 Released energy: "
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+teams:before {
+    display: block;
+    content: "Teams: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+
+teams team:before {
+    display: block;
+    content: "Id: " attr(id);
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(33, 128, 96);
+}
+
+team name:after, team principal:after, team nationality:after, team budget:after, team driver_titles:after, team constructor_titles:after, team staff amount:after, team staff technical_director:after, team staff strategist:after {
+    content: "\A";
+    white-space: pre;
+}
+
+team name:before, team principal:before, team nationality:before, team budget:before, team driver_titles:before, team constructor_titles:before {
+    color: rgb(65, 16, 16);
+    font-size: 120%;
+    font-style: italic;
+}
+
+team name:before {
+    content: "Name: ";
+}
+
+team principal:before {
+    content: "Principal: ";
+}
+
+team nationality:before {
+    content: "Nationality (" attr(code) "): ";
+}
+
+team budget:before {
+    content: "Budget (" attr(currency) ", " attr(unit) "): ";
+}
+
+team driver_titles:before {
+    content: "Driver titles: ";
+}
+
+team constructor_titles:before {
+    content: "Constructor titles: ";
+}
+
+team staff:before, team car:before {
+    display: block;
+    color: grey;
+    font-size: 120%;
+}
+
+team staff:before {
+    content: "\00a0 STAFF: ";
+}
+
+team staff amount:before, team staff technical_director:before, team staff strategist:before, team car name:before, team car engine:before {
+    color: rgb(165, 113, 113);
+    font-size: 110%;
+}
+
+team staff amount:before {
+    content: "\00a0\00a0 Amount (" attr(unit) "): ";
+}
+
+team staff technical_director:before {
+    content: "\00a0\00a0 Technical director: ";
+}
+
+team staff strategist:before {
+    content: "\00a0\00a0 Strategist: ";
+}
+
+team car:before {
+    content: "\00a0 CAR: ";
+}
+
+team car name:before {
+    content: "\00a0\00a0 Name: ";
+}
+
+team car engine:before {
+    content: "\00a0\00a0 Engine: " attr(refid) ;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+drivers:before {
+    display: block;
+    content: "Drivers: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+
+drivers driver:before {
+    display: block;
+    content: "Id: " attr(id);
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(33, 128, 96);
+}
+
+driver team:before, driver first_name:before, driver last_name:before, driver nationality:before, driver championship_titles:before, driver poles:before, driver race_wins:before {
+    color: rgb(65, 16, 16);
+    font-size: 120%;
+    font-style: italic;
+}
+
+driver team:after, driver first_name:after, driver last_name:after, driver nationality:after, driver championship_titles:after, driver poles:after, driver race_wins:after {
+    content: "\A";
+    white-space: pre;
+}
+
+driver team:before {
+    content: "Team: " attr(refid);
+}
+
+driver first_name:before {
+    content: "First name: ";
+}
+
+driver last_name:before {
+    content: "Last name: ";
+}
+
+driver nationality:before {
+    content: "Nationality (" attr(code) "): ";
+}
+
+driver championship_titles:before {
+    content: "Championship titles: ";
+}
+
+driver poles:before {
+    content: "Poles: ";
+}
+
+driver race_wins:before {
+    content: "Race wins: ";
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+circuits:before {
+    display: block;
+    content: "Circuits: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+
+circuits circuit:before {
+    display: block;
+    content: "Id: " attr(id);
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(33, 128, 96);
+}
+
+circuit name:before, circuit type:before, circuit direction:before, circuit length:before, circuit turns:before {
+    color: rgb(65, 16, 16);
+    font-size: 120%;
+    font-style: italic;
+}
+
+circuit name:after, circuit type:after, circuit direction:after, circuit length:after, circuit turns:after, circuit localization city:after {
+    content: "\A";
+    white-space: pre;
+}
+
+circuit name:before {
+    content: "Name: ";
+}
+
+circuit type:before {
+    content: "Type: ";
+}
+
+circuit direction:before {
+    content: "Direction: ";
+}
+
+circuit length:before {
+    content: "Length (" attr(unit) "): ";
+}
+
+circuit turns:before {
+    content: "Turns: ";
+}
+
+circuit localization:before {
+    display: block;
+    color: grey;
+    font-size: 120%;
+    content: "\00a0 LOCALIZATION: ";
+}
+
+circuit localization city:before, circuit localization country:before {
+    color: rgb(165, 113, 113);
+    font-size: 110%;
+}
+
+circuit localization city:before {
+    content: "\00a0\00a0 City: ";
+}
+
+circuit localization country:before {
+    content: "\00a0\00a0 Country (" attr(code) "): ";
+}
