@@ -8,7 +8,7 @@ engines:before {
 
 engines engine:before {
     display: block;
-    content: "Id: " attr(id);
+    content: "Id: " attr(engine_id);
     font-weight: bold;
     font-size: 130%;
     color: rgb(33, 128, 96);
@@ -77,7 +77,7 @@ engine hybrid mgu-k power:before, engine hybrid mgu-k max_rpm:before, engine hyb
 }
 
 engine hybrid mgu-k power:before {
-    content: "\00a0 \00a0 \00a0 Power (" attr(unit) "): ";
+    content: "\00a0 \00a0 \00a0 Power (" attr(energy_unit) "): ";
 }
 
 engine hybrid mgu-k max_rpm:before, engine hybrid mgu-h max_rpm:before {
@@ -85,11 +85,11 @@ engine hybrid mgu-k max_rpm:before, engine hybrid mgu-h max_rpm:before {
 }
 
 engine hybrid mgu-k recovered_energy:before {
-    content: "\00a0 \00a0 \00a0 Recovered energy (" attr(unit) "): ";
+    content: "\00a0 \00a0 \00a0 Recovered energy (" attr(energy_unit) "): ";
 }
 
 engine hybrid mgu-k released_energy:before {
-    content: "\00a0 \00a0 \00a0 Released energy (" attr(unit) "): ";
+    content: "\00a0 \00a0 \00a0 Released energy (" attr(energy_unit) "): ";
 }
 
 engine hybrid mgu-h:before {
@@ -161,7 +161,7 @@ team staff:before {
     content: "\00a0 STAFF: ";
 }
 
-team staff amount:before, team staff technical_director:before, team staff strategist:before, team car name:before, team car engine:before {
+team staff amount:before, team staff technical_director:before, team staff strategist:before, team car name:before, team car car_engine:before {
     color: rgb(165, 113, 113);
     font-size: 110%;
 }
@@ -186,7 +186,7 @@ team car name:before {
     content: "\00a0\00a0 Name: ";
 }
 
-team car engine:before {
+team car car_engine:before {
     content: "\00a0\00a0 Engine: " attr(refid) ;
 }
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -206,18 +206,18 @@ drivers driver:before {
     color: rgb(33, 128, 96);
 }
 
-driver team:before, driver first_name:before, driver last_name:before, driver nationality:before, driver championship_titles:before, driver poles:before, driver race_wins:before {
+driver driver_team:before, driver first_name:before, driver last_name:before, driver nationality:before, driver championship_titles:before, driver poles:before, driver race_wins:before {
     color: rgb(65, 16, 16);
     font-size: 120%;
     font-style: italic;
 }
 
-driver team:after, driver first_name:after, driver last_name:after, driver nationality:after, driver championship_titles:after, driver poles:after, driver race_wins:after {
+driver driver_team:after, driver first_name:after, driver last_name:after, driver nationality:after, driver championship_titles:after, driver poles:after, driver race_wins:after {
     content: "\A";
     white-space: pre;
 }
 
-driver team:before {
+driver driver_team:before {
     content: "Team: " attr(refid);
 }
 

@@ -1,8 +1,8 @@
 <!-- ENGINES -->
-<!ATTLIST power unit CDATA #FIXED "kW">
-<!ATTLIST recovered_energy unit CDATA #IMPLIED>
-<!ATTLIST released_energy unit CDATA #FIXED "MJ">
-<!ATTLIST engine id ID #REQUIRED>
+<!ATTLIST power energy_unit CDATA #FIXED "kW">
+<!ATTLIST recovered_energy energy_unit CDATA #IMPLIED>
+<!ATTLIST released_energy energy_unit CDATA #FIXED "MJ">
+<!ATTLIST engine engine_id ID #REQUIRED>
 <!ENTITY % ice "displacement, cylinders, horse_power, max_rpm">
 <!ENTITY % mgu-k "power, max_rpm, recovered_energy, released_energy">
 <!ENTITY % mgu-h "max_rpm, recovered_energy">
