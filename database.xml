@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE formula1 SYSTEM "database.dtd">
 <formula1>
     <engines>
-        <engine id="MER">
+        <engine id="E_MER">
             <manufacter>Mercedes</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -23,7 +24,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="FER">
+        <engine id="E_FER">
             <manufacter>Ferrari</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -44,7 +45,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="HON">
+        <engine id="E_HON">
             <manufacter>Honda</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -65,7 +66,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="REN">
+        <engine id="E_REN">
             <manufacter>Renault</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -103,7 +104,7 @@
             </staff>
             <car>
                 <name>W10 EQ Power+</name>
-                <engine refid="MER"></engine>
+                <car_engine refid="E_MER"></car_engine>
             </car>
         </team>
         <team id="FER">
@@ -120,7 +121,7 @@
             </staff>
             <car>
                 <name>SF90</name>
-                <engine refid="FER"></engine>
+                <car_engine refid="E_FER"></car_engine>
             </car>
         </team>
         <team id="RBR">
@@ -137,7 +138,7 @@
             </staff>
             <car>
                 <name>RB15</name>
-                <engine refid="HON"></engine>
+                <car_engine refid="E_HON"></car_engine>
             </car>
         </team>
         <team id="REN">
@@ -154,7 +155,7 @@
             </staff>
             <car>
                 <name>R.S.19</name>
-                <engine refid="REN"></engine>
+                <car_engine refid="E_REN"></car_engine>
             </car>
         </team>
         <team id="HAA">
@@ -171,7 +172,7 @@
             </staff>
             <car>
                 <name>VF-19</name>
-                <engine refid="FER"></engine>
+                <car_engine refid="E_FER"></car_engine>
             </car>
         </team>
         <team id="MCL">
@@ -188,7 +189,7 @@
             </staff>
             <car>
                 <name>MCL34</name>
-                <engine refid="REN"></engine>
+                <car_engine refid="E_REN"></car_engine>
             </car>
         </team>
         <team id="SRP">
@@ -205,7 +206,7 @@
             </staff>
             <car>
                 <name>RP19</name>
-                <engine refid="MER"></engine>
+                <car_engine refid="E_MER"></car_engine>
             </car>
         </team>
         <team id="ARR">
@@ -222,11 +223,11 @@
             </staff>
             <car>
                 <name>C38</name>
-                <engine refid="FER"></engine>
+                <car_engine refid="E_FER"></car_engine>
             </car>
         </team>
-        <team id="STR">
-            <name>Scuderia Toro Rosso</name>
+        <team id="TRH">
+            <name>Scuderia Toro Rosso Honda</name>
             <principal>Franz Tost</principal>
             <nationality code="ITA">Italy</nationality>
             <budget currency="€" unit="million">125</budget>
@@ -239,7 +240,7 @@
             </staff>
             <car>
                 <name>STR14</name>
-                <engine refid="HON"></engine>
+                <car_engine refid="E_HON"></car_engine>
             </car>
         </team>
         <team id="RWR">
@@ -256,14 +257,14 @@
             </staff>
             <car>
                 <name>FW42</name>
-                <engine refid="MER"></engine>
+                <car_engine refid="E_MER"></car_engine>
             </car>
         </team>
     </teams>
 
     <drivers>
         <driver id="HAM">
-            <team refid="MER"></team>
+            <driver_team refid="MER"></driver_team>
             <first_name>Lewis</first_name>
             <last_name>Hamilton</last_name>
             <nationality code="GBR">Great Britian</nationality>
@@ -272,7 +273,7 @@
             <race_wins>75</race_wins>
         </driver>
         <driver id="BOT">
-            <team refid="MER"></team>
+            <driver_team refid="MER"></driver_team>
             <first_name>Valtteri</first_name>
             <last_name>Bottas</last_name>
             <nationality code="FIN">Finland</nationality>
@@ -281,7 +282,7 @@
             <race_wins>5</race_wins>
         </driver>
         <driver id="VET">
-            <team refid="FER"></team>
+            <driver_team refid="FER"></driver_team>
             <first_name>Sebastian</first_name>
             <last_name>Vettel</last_name>
             <nationality code="GER">Germany</nationality>
@@ -290,7 +291,7 @@
             <race_wins>52</race_wins>
         </driver>
         <driver id="LEC">
-            <team refid="FER"></team>
+            <driver_team refid="FER"></driver_team>
             <first_name>Charles</first_name>
             <last_name>Leclerc</last_name>
             <nationality code="MON">Monaco</nationality>
@@ -299,7 +300,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="VER">
-            <team refid="RBR"></team>
+            <driver_team refid="RBR"></driver_team>
             <first_name>Max</first_name>
             <last_name>Verstappen</last_name>
             <nationality code="NLD">Netherlands</nationality>
@@ -308,7 +309,7 @@
             <race_wins>5</race_wins>
         </driver>
         <driver id="GAS">
-            <team refid="RBR"></team>
+            <driver_team refid="RBR"></driver_team>
             <first_name>Pierre</first_name>
             <last_name>Gasly</last_name>
             <nationality code="FRA">France</nationality>
@@ -317,7 +318,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="RIC">
-            <team refid="REN"></team>
+            <driver_team refid="REN"></driver_team>
             <first_name>Daniel</first_name>
             <last_name>Ricciardo</last_name>
             <nationality code="AUS">Australia</nationality>
@@ -326,7 +327,7 @@
             <race_wins>7</race_wins>
         </driver>
         <driver id="HUL">
-            <team refid="REN"></team>
+            <driver_team refid="REN"></driver_team>
             <first_name>Nico</first_name>
             <last_name>Hulkenberg</last_name>
             <nationality code="GER">Germany</nationality>
@@ -335,7 +336,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="GRO">
-            <team refid="HAA"></team>
+            <driver_team refid="HAA"></driver_team>
             <first_name>Romain</first_name>
             <last_name>Grosjean</last_name>
             <nationality code="FRA">France</nationality>
@@ -344,7 +345,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="MAG">
-            <team refid="HAA"></team>
+            <driver_team refid="HAA"></driver_team>
             <first_name>Kevin</first_name>
             <last_name>Magnussen</last_name>
             <nationality code="DEN">Dennmark</nationality>
@@ -353,7 +354,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="SAI">
-            <team refid="MCL"></team>
+            <driver_team refid="MCL"></driver_team>
             <first_name>Carlos</first_name>
             <last_name>Sainz</last_name>
             <nationality code="ESP">Spain</nationality>
@@ -362,7 +363,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="NOR">
-            <team refid="MCL"></team>
+            <driver_team refid="MCL"></driver_team>
             <first_name>Lando</first_name>
             <last_name>Norris</last_name>
             <nationality code="GBR">Great Britian</nationality>
@@ -371,7 +372,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="PER">
-            <team refid="SRP"></team>
+            <driver_team refid="SRP"></driver_team>
             <first_name>Sergio</first_name>
             <last_name>Perez</last_name>
             <nationality code="MEX">Mexico</nationality>
@@ -380,7 +381,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="STR">
-            <team refid="SRP"></team>
+            <driver_team refid="SRP"></driver_team>
             <first_name>Lance</first_name>
             <last_name>Stroll</last_name>
             <nationality code="CAN">Canada</nationality>
@@ -389,7 +390,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="RAI">
-            <team refid="ARR"></team>
+            <driver_team refid="ARR"></driver_team>
             <first_name>Kimi</first_name>
             <last_name>Raikkonen</last_name>
             <nationality code="FIN">Finland</nationality>
@@ -398,7 +399,7 @@
             <race_wins>21</race_wins>
         </driver>
         <driver id="GIO">
-            <team refid="ARR"></team>
+            <driver_team refid="ARR"></driver_team>
             <first_name>Antonio</first_name>
             <last_name>Giovinazzi</last_name>
             <nationality code="ITA">Italy</nationality>
@@ -407,7 +408,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="KVY">
-            <team refid="STR"></team>
+            <driver_team refid="STR"></driver_team>
             <first_name>Daniil</first_name>
             <last_name>Kvyat</last_name>
             <nationality code="RUS">Russia</nationality>
@@ -416,7 +417,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="ALB">
-            <team refid="STR"></team>
+            <driver_team refid="STR"></driver_team>
             <first_name>Alexander</first_name>
             <last_name>Albon</last_name>
             <nationality code="THA">Thailand</nationality>
@@ -425,7 +426,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="KUB">
-            <team refid="RWR"></team>
+            <driver_team refid="RWR"></driver_team>
             <first_name>Robert</first_name>
             <last_name>Kubica</last_name>
             <nationality code="POL">Poland</nationality>
@@ -434,7 +435,7 @@
             <race_wins>1</race_wins>
         </driver>
         <driver id="RUS">
-            <team refid="RWR"></team>
+            <driver_team refid="RWR"></driver_team>
             <first_name>George</first_name>
             <last_name>Russel</last_name>
             <nationality code="GBR">Great Britian</nationality>
@@ -599,7 +600,7 @@
                 <country code="FRA">France</country>
             </localization>
         </circuit>
-        <circuit id="RBR">
+        <circuit id="RBB">
             <name>Red Bull Ring</name>
             <type>constant</type>
             <direction>right</direction>

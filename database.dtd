@@ -1,0 +1,75 @@
+<!-- ENGINES -->
+<!ATTLIST power unit CDATA #FIXED "kW">
+<!ATTLIST recovered_energy unit CDATA #IMPLIED>
+<!ATTLIST released_energy unit CDATA #FIXED "MJ">
+<!ATTLIST engine id ID #REQUIRED>
+<!ENTITY % ice "displacement, cylinders, horse_power, max_rpm">
+<!ENTITY % mgu-k "power, max_rpm, recovered_energy, released_energy">
+<!ENTITY % mgu-h "max_rpm, recovered_energy">
+<!-- TEAMS -->
+<!ATTLIST team id ID #REQUIRED>
+<!ATTLIST nationality code CDATA #REQUIRED>
+<!ATTLIST budget currency CDATA #REQUIRED unit CDATA #FIXED "million">
+<!ATTLIST amount unit CDATA #FIXED "person">
+<!ATTLIST car_engine refid IDREF #REQUIRED>
+<!ENTITY % staff "amount, technical_director, strategist">
+<!ENTITY % car "name, car_engine">
+<!-- DRIVERS -->
+<!ATTLIST driver id ID #REQUIRED>
+<!ATTLIST driver_team refid IDREF #REQUIRED>
+<!-- CIRCUITS -->
+<!ATTLIST circuit id ID #REQUIRED>
+<!ATTLIST length unit CDATA #FIXED "km">
+<!ATTLIST country code CDATA #REQUIRED>
+<!ENTITY % localization "city, country">
+<!-- ROOT -->
+<!ELEMENT formula1 (engines, teams, drivers, circuits)>
+<!-- ENGINES -->
+<!ELEMENT engines (engine+)>
+<!ELEMENT engine (manufacter, ice, hybrid)>
+<!ELEMENT manufacter (#PCDATA)>
+<!ELEMENT ice (%ice;)>
+<!ELEMENT mgu-k (%mgu-k;)>
+<!ELEMENT mgu-h (%mgu-h;)>
+<!ELEMENT hybrid (mgu-k, mgu-h)>
+<!ELEMENT displacement (#PCDATA)>
+<!ELEMENT cylinders (#PCDATA)>
+<!ELEMENT horse_power (#PCDATA)>
+<!ELEMENT max_rpm (#PCDATA)>
+<!ELEMENT power (#PCDATA)>
+<!ELEMENT recovered_energy (#PCDATA)>
+<!ELEMENT released_energy (#PCDATA)>
+<!-- TEAMS -->
+<!ELEMENT teams (team+)>
+<!ELEMENT team (name, principal, nationality, budget, driver_titles, constructor_titles, staff, car)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT principal (#PCDATA)>
+<!ELEMENT nationality (#PCDATA)>
+<!ELEMENT budget (#PCDATA)>
+<!ELEMENT driver_titles (#PCDATA)>
+<!ELEMENT constructor_titles (#PCDATA)>
+<!ELEMENT staff (%staff;)>
+<!ELEMENT car (%car;)>
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT technical_director (#PCDATA)>
+<!ELEMENT strategist (#PCDATA)>
+<!ELEMENT car_engine (#PCDATA)>
+<!-- DRIVERS -->
+<!ELEMENT drivers (driver+)>
+<!ELEMENT driver (driver_team, first_name, last_name, nationality, championship_titles, poles, race_wins)>
+<!ELEMENT driver_team (#PCDATA)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT championship_titles (#PCDATA)>
+<!ELEMENT poles (#PCDATA)>
+<!ELEMENT race_wins (#PCDATA)>
+<!-- CIRCUITS -->
+<!ELEMENT circuits (circuit+)>
+<!ELEMENT circuit (name, type, direction, length, turns, localization)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT direction (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT turns (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT localization (%localization;)>
