@@ -1,0 +1,693 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+                table {
+                    border: 2px solid black;
+                    border-collapse: collapse;
+                }
+                td, th, tr {
+                    border: 1px solid black;
+                    text-align: center;
+                }
+                p {
+                    color: green;
+                    font-weight: bold;
+                }
+            </style>
+</head>
+<body><div class="container-fluid"><div class="row"><div class="col-12 p-0"><div class="jumbotron min-vh-100 text-center d-flex flex-column">
+<div id="engines">
+<p>ENGINES:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>Manufacter</th>
+<th colspan="4">ICE</th>
+<th colspan="4">MGU-K</th>
+<th colspan="2">MGU-H</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">E_MER</td>
+<td style="color: #00CED1;">Mercedes</td>
+<td>1.6L V6</td>
+<td>6 cylinders</td>
+<td>700 hp</td>
+<td>15000 rpm</td>
+<td>120 kW power</td>
+<td>50000 rpm</td>
+<td>2 MJ recovery</td>
+<td>4 MJ release</td>
+<td>100000 rpm</td>
+<td>unlimited recovery</td>
+</tr>
+<tr>
+<td style="color: red;">E_FER</td>
+<td style="color: red;">Ferrari</td>
+<td>1.6L V6</td>
+<td>6 cylinders</td>
+<td>730 hp</td>
+<td>15000 rpm</td>
+<td>140 kW power</td>
+<td>50000 rpm</td>
+<td>2 MJ recovery</td>
+<td>4 MJ release</td>
+<td>100000 rpm</td>
+<td>unlimited recovery</td>
+</tr>
+<tr>
+<td style="color: blue;">E_HON</td>
+<td style="color: blue;">Honda</td>
+<td>1.6L V6</td>
+<td>6 cylinders</td>
+<td>680 hp</td>
+<td>15000 rpm</td>
+<td>110 kW power</td>
+<td>50000 rpm</td>
+<td>2 MJ recovery</td>
+<td>4 MJ release</td>
+<td>100000 rpm</td>
+<td>unlimited recovery</td>
+</tr>
+<tr>
+<td style="color: yellow;">E_REN</td>
+<td style="color: yellow;">Renault</td>
+<td>1.6L V6</td>
+<td>6 cylinders</td>
+<td>650 hp</td>
+<td>15000 rpm</td>
+<td>98 kW power</td>
+<td>50000 rpm</td>
+<td>2 MJ recovery</td>
+<td>4 MJ release</td>
+<td>100000 rpm</td>
+<td>unlimited recovery</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="teams">
+<p>TEAMS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>Name</th>
+<th>Principal</th>
+<th>Country</th>
+<th>Budget</th>
+<th>Driver titles</th>
+<th>Constructor titles</th>
+<th colspan="3">Staff</th>
+<th colspan="2">Car</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">MER</td>
+<td style="color: #00CED1;">Mercedes AMG Petronas</td>
+<td>Toto Wolff</td>
+<td>Germany (GER)</td>
+<td>450 million $</td>
+<td>7</td>
+<td>5</td>
+<td>1400 people</td>
+<td>James Allison</td>
+<td>James Vowles</td>
+<td>W10 EQ Power+</td>
+<td style="color: #00CED1;">E_MER engine</td>
+</tr>
+<tr>
+<td style="color: red;">FER</td>
+<td style="color: red;">Scuderia Ferrari</td>
+<td>Mattia Binotto</td>
+<td>Italy (ITA)</td>
+<td>542 million €</td>
+<td>15</td>
+<td>16</td>
+<td>1000 people</td>
+<td>Mattia Binotto</td>
+<td>Jock Clear</td>
+<td>SF90</td>
+<td style="color: red;">E_FER engine</td>
+</tr>
+<tr>
+<td style="color: blue;">RBR</td>
+<td style="color: blue;">Aston Martin Red Bull Racing</td>
+<td>Christian Horner</td>
+<td>Austria (AUT)</td>
+<td>350 million €</td>
+<td>4</td>
+<td>4</td>
+<td>650 people</td>
+<td>Adrian Newey</td>
+<td>Ruth Buscombe</td>
+<td>RB15</td>
+<td style="color: blue;">E_HON engine</td>
+</tr>
+<tr>
+<td style="color: yellow;">REN</td>
+<td style="color: yellow;">Renault Sport F1</td>
+<td>Cyril Abiteboul</td>
+<td>France (FRA)</td>
+<td>300 million €</td>
+<td>2</td>
+<td>2</td>
+<td>800 people</td>
+<td>Bob Bell</td>
+<td>Nick Chester</td>
+<td>R.S.19</td>
+<td style="color: yellow;">E_REN engine</td>
+</tr>
+<tr>
+<td style="color: brown;">HAA</td>
+<td style="color: brown;">Haas F1 Team</td>
+<td>Gunther Steiner</td>
+<td>United States (USA)</td>
+<td>110 million €</td>
+<td>0</td>
+<td>0</td>
+<td>212 people</td>
+<td>Andy Cowell</td>
+<td>Simone Resta</td>
+<td>VF-19</td>
+<td style="color: red;">E_FER engine</td>
+</tr>
+<tr>
+<td style="color: orange;">MCL</td>
+<td style="color: orange;">McLaren</td>
+<td>Gil de Ferran</td>
+<td>Great Britian (GBR)</td>
+<td>250 million €</td>
+<td>12</td>
+<td>8</td>
+<td>750 people</td>
+<td>Jonathan Neale</td>
+<td>Matt Morris</td>
+<td>MCL34</td>
+<td style="color: yellow;">E_REN engine</td>
+</tr>
+<tr>
+<td style="color: pink;">SRP</td>
+<td style="color: pink;">Sport Pesa Racing Point</td>
+<td>Otmar Szafnauer</td>
+<td>Great Britian (GBR)</td>
+<td>110 million €</td>
+<td>0</td>
+<td>0</td>
+<td>400 people</td>
+<td>Andrew Green</td>
+<td>Tom McCullough</td>
+<td>RP19</td>
+<td style="color: #00CED1;">E_MER engine</td>
+</tr>
+<tr>
+<td style="color: #8B0000;">ARR</td>
+<td style="color: #8B0000;">Alfa Romeo Racing</td>
+<td>Frideric Vasseur</td>
+<td>Switzerland (SWI)</td>
+<td>135 million €</td>
+<td>2</td>
+<td>0</td>
+<td>430 people</td>
+<td>Andy Stevenson</td>
+<td>Steve Curnow</td>
+<td>C38</td>
+<td style="color: red;">E_FER engine</td>
+</tr>
+<tr>
+<td style="color: navy;">TRH</td>
+<td style="color: navy;">Scuderia Toro Rosso Honda</td>
+<td>Franz Tost</td>
+<td>Italy (ITA)</td>
+<td>125 million €</td>
+<td>0</td>
+<td>0</td>
+<td>500 people</td>
+<td>Tim Goss</td>
+<td>Peter Prodromou</td>
+<td>STR14</td>
+<td style="color: blue;">E_HON engine</td>
+</tr>
+<tr>
+<td style="color: white;">RWR</td>
+<td style="color: white;">ROKIT Williams Racing</td>
+<td>Claire Williams</td>
+<td>Great Britian (GBR)</td>
+<td>135 million €</td>
+<td>7</td>
+<td>9</td>
+<td>712 people</td>
+<td>Paddy Lowe</td>
+<td>Dave Robson</td>
+<td>FW42</td>
+<td style="color: #00CED1;">E_MER engine</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="drivers">
+<p>DRIVERS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>Team</th>
+<th>First name</th>
+<th>Last name</th>
+<th>Nationality</th>
+<th>Championship titles</th>
+<th>Poles</th>
+<th>Race wins</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="color: #00CED1;">HAM</td>
+<td style="color: #00CED1;">MER</td>
+<td>Lewis</td>
+<td>Hamilton</td>
+<td>Great Britian (GBR)</td>
+<td>5</td>
+<td>84</td>
+<td>75</td>
+</tr>
+<tr>
+<td style="color: #00CED1;">BOT</td>
+<td style="color: #00CED1;">MER</td>
+<td>Valtteri</td>
+<td>Bottas</td>
+<td>Finland (FIN)</td>
+<td>0</td>
+<td>8</td>
+<td>5</td>
+</tr>
+<tr>
+<td style="color: red;">VET</td>
+<td style="color: red;">FER</td>
+<td>Sebastian</td>
+<td>Vettel</td>
+<td>Germany (GER)</td>
+<td>4</td>
+<td>55</td>
+<td>52</td>
+</tr>
+<tr>
+<td style="color: red;">LEC</td>
+<td style="color: red;">FER</td>
+<td>Charles</td>
+<td>Leclerc</td>
+<td>Monaco (MON)</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: blue;">VER</td>
+<td style="color: blue;">RBR</td>
+<td>Max</td>
+<td>Verstappen</td>
+<td>Netherlands (NLD)</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td style="color: blue;">GAS</td>
+<td style="color: blue;">RBR</td>
+<td>Pierre</td>
+<td>Gasly</td>
+<td>France (FRA)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: yellow;">RIC</td>
+<td style="color: yellow;">REN</td>
+<td>Daniel</td>
+<td>Ricciardo</td>
+<td>Australia (AUS)</td>
+<td>0</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td style="color: yellow;">HUL</td>
+<td style="color: yellow;">REN</td>
+<td>Nico</td>
+<td>Hulkenberg</td>
+<td>Germany (GER)</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: brown;">GRO</td>
+<td style="color: brown;">HAA</td>
+<td>Romain</td>
+<td>Grosjean</td>
+<td>France (FRA)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: brown;">MAG</td>
+<td style="color: brown;">HAA</td>
+<td>Kevin</td>
+<td>Magnussen</td>
+<td>Dennmark (DEN)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: orange;">SAI</td>
+<td style="color: orange;">MCL</td>
+<td>Carlos</td>
+<td>Sainz</td>
+<td>Spain (ESP)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: orange;">NOR</td>
+<td style="color: orange;">MCL</td>
+<td>Lando</td>
+<td>Norris</td>
+<td>Great Britian (GBR)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: pink;">PER</td>
+<td style="color: pink;">SRP</td>
+<td>Sergio</td>
+<td>Perez</td>
+<td>Mexico (MEX)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: pink;">STR</td>
+<td style="color: pink;">SRP</td>
+<td>Lance</td>
+<td>Stroll</td>
+<td>Canada (CAN)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: #8B0000;">RAI</td>
+<td style="color: #8B0000;">ARR</td>
+<td>Kimi</td>
+<td>Raikkonen</td>
+<td>Finland (FIN)</td>
+<td>1</td>
+<td>18</td>
+<td>21</td>
+</tr>
+<tr>
+<td style="color: #8B0000;">GIO</td>
+<td style="color: #8B0000;">ARR</td>
+<td>Antonio</td>
+<td>Giovinazzi</td>
+<td>Italy (ITA)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: navy;">KVY</td>
+<td style="color: navy;">TRH</td>
+<td>Daniil</td>
+<td>Kvyat</td>
+<td>Russia (RUS)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: navy;">ALB</td>
+<td style="color: navy;">TRH</td>
+<td>Alexander</td>
+<td>Albon</td>
+<td>Thailand (THA)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="color: white;">KUB</td>
+<td style="color: white;">RWR</td>
+<td>Robert</td>
+<td>Kubica</td>
+<td>Poland (POL)</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="color: white;">RUS</td>
+<td style="color: white;">RWR</td>
+<td>George</td>
+<td>Russel</td>
+<td>Great Britian (GBR)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="circuits">
+<p>CIRCUITS:</p>
+<table class="table table-hover table-striped">
+<thead class="thead-dark"><tr>
+<th>ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Direction</th>
+<th>Length</th>
+<th>Turns</th>
+<th colspan="2">Localization</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>APC</td>
+<td>Albert Park Circuit</td>
+<td>street</td>
+<td>right</td>
+<td>5.303 km</td>
+<td>16</td>
+<td>Melbourne</td>
+<td>Australia (AUS)</td>
+</tr>
+<tr>
+<td>BIC</td>
+<td>Bahrain International Circuit</td>
+<td>constant</td>
+<td>right</td>
+<td>5.412 km</td>
+<td>15</td>
+<td>Manama</td>
+<td>Bahrain (BHR)</td>
+</tr>
+<tr>
+<td>BCC</td>
+<td>Baku City Circuit</td>
+<td>street</td>
+<td>left</td>
+<td>6.006 km</td>
+<td>20</td>
+<td>Baku</td>
+<td>Azerbaijan (AZE)</td>
+</tr>
+<tr>
+<td>CBC</td>
+<td>Circuit de Barcelona-Catalunya</td>
+<td>constant</td>
+<td>right</td>
+<td>4.655 km</td>
+<td>16</td>
+<td>Montmelo</td>
+<td>Azerbaijan (AZE)</td>
+</tr>
+<tr>
+<td>COA</td>
+<td>Circuit of the Americas</td>
+<td>constant</td>
+<td>left</td>
+<td>5.513 km</td>
+<td>20</td>
+<td>Austin</td>
+<td>United States (USA)</td>
+</tr>
+<tr>
+<td>CGV</td>
+<td>Circuit Gilles Villeneuve</td>
+<td>street</td>
+<td>right</td>
+<td>4.361 km</td>
+<td>14</td>
+<td>Montreal</td>
+<td>Canada (CAN)</td>
+</tr>
+<tr>
+<td>AHR</td>
+<td>Autodromo Hermanos Rodriguez</td>
+<td>constant</td>
+<td>right</td>
+<td>4.304 km</td>
+<td>14</td>
+<td>Mexico City</td>
+<td>Mexico (MEX)</td>
+</tr>
+<tr>
+<td>HMG</td>
+<td>Hockenheimring</td>
+<td>constant</td>
+<td>right</td>
+<td>4.574 km</td>
+<td>13</td>
+<td>Hockenheim</td>
+<td>Germany (GER)</td>
+</tr>
+<tr>
+<td>HOG</td>
+<td>Hungaroring</td>
+<td>constant</td>
+<td>right</td>
+<td>4.381 km</td>
+<td>14</td>
+<td>Budapest</td>
+<td>Hungary (HUN)</td>
+</tr>
+<tr>
+<td>AJP</td>
+<td>Autodromo Jose Carlos Pace</td>
+<td>constant</td>
+<td>left</td>
+<td>4.309 km</td>
+<td>15</td>
+<td>Sao Paulo</td>
+<td>Brazil (BRA)</td>
+</tr>
+<tr>
+<td>MSC</td>
+<td>Marina Bay Street Circuit</td>
+<td>street</td>
+<td>left</td>
+<td>5.065 km</td>
+<td>23</td>
+<td>Singapore</td>
+<td>Singapore (SGP)</td>
+</tr>
+<tr>
+<td>CDM</td>
+<td>Circuit de Monaco</td>
+<td>street</td>
+<td>right</td>
+<td>3.337 km</td>
+<td>19</td>
+<td>Monaco</td>
+<td>Monaco (MON)</td>
+</tr>
+<tr>
+<td>ANM</td>
+<td>Autodromo Nazionale di Monza</td>
+<td>constant</td>
+<td>right</td>
+<td>5.793 km</td>
+<td>11</td>
+<td>Monza</td>
+<td>Italy (ITA)</td>
+</tr>
+<tr>
+<td>CPR</td>
+<td>Circuit Paul Ricard</td>
+<td>constant</td>
+<td>right</td>
+<td>5.800 km</td>
+<td>10</td>
+<td>Le Castellet</td>
+<td>France (FRA)</td>
+</tr>
+<tr>
+<td>RBB</td>
+<td>Red Bull Ring</td>
+<td>constant</td>
+<td>right</td>
+<td>4.326 km</td>
+<td>8</td>
+<td>Spielberg</td>
+<td>Austria (AUT)</td>
+</tr>
+<tr>
+<td>SIC</td>
+<td>Shanghai International Circuit</td>
+<td>constant</td>
+<td>right</td>
+<td>5.451 km</td>
+<td>16</td>
+<td>Shanghai</td>
+<td>China (CHN)</td>
+</tr>
+<tr>
+<td>SRC</td>
+<td>Silverstone Circiut</td>
+<td>constant</td>
+<td>right</td>
+<td>5.891 km</td>
+<td>20</td>
+<td>Silverstone</td>
+<td>Great Britian (GBR)</td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>Sochi Autdrom</td>
+<td>mixed</td>
+<td>right</td>
+<td>5.848 km</td>
+<td>19</td>
+<td>Sochi</td>
+<td>Russia (RUS)</td>
+</tr>
+<tr>
+<td>CSF</td>
+<td>Circiut de Spa-Francorchamps</td>
+<td>mixed</td>
+<td>right</td>
+<td>7.004 km</td>
+<td>21</td>
+<td>Stavelot</td>
+<td>Belgium (BEL)</td>
+</tr>
+<tr>
+<td>SIR</td>
+<td>Suzuka International Racing Course</td>
+<td>constant</td>
+<td>both</td>
+<td>5.807 km</td>
+<td>17</td>
+<td>Suzuka</td>
+<td>Japan (JPN)</td>
+</tr>
+<tr>
+<td>YMC</td>
+<td>Yas Marina Circiut</td>
+<td>constant</td>
+<td>left</td>
+<td>5.554 km</td>
+<td>21</td>
+<td>Abu Dhabi</td>
+<td>United Arab Emirates (UAE)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></div></div></body>
+</html>
