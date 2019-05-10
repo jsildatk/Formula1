@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- ATTRIBUTES -->
+
+    <xs:attribute name="engine_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="E_[A-Z]{3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+        <xs:attribute name="refid">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="([A-Z]{3}|E_[A-Z]{3})"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="code">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="energy_unit">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z]{2}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="currency">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[$,€]{1}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="unit">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-z]*"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+<!-- GLOBALS -->
+
+    <xs:complexType name="type_country">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="code"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="type_refid">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="refid"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="type_unit">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="unit"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+<!-- ENGINES -->
+
+    <xs:complexType name="type_ice">
+        <xs:sequence>
+            <xs:element name="displacement" type="xs:string"></xs:element>
+            <xs:element name="cylinders" type="xs:positiveInteger"></xs:element>
+            <xs:element name="horse_power" type="xs:positiveInteger"></xs:element>
+            <xs:element name="max_rpm" type="xs:positiveInteger"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_energy">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="energy_unit"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="type_mgu-k">
+        <xs:sequence>
+            <xs:element name="power" type="type_energy"></xs:element>
+            <xs:element name="max_rpm" type="xs:positiveInteger"></xs:element>
+            <xs:element name="recovered_energy" type="type_energy"></xs:element>
+            <xs:element name="released_energy" type="type_energy"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_mgu-h">
+        <xs:sequence>
+            <xs:element name="max_rpm" type="xs:positiveInteger"></xs:element>
+            <xs:element name="recovered_energy" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_hybrid">
+        <xs:sequence>
+            <xs:element name="mgu-k" type="type_mgu-k" maxOccurs="1" minOccurs="1"></xs:element>
+            <xs:element name="mgu-h" type="type_mgu-h" maxOccurs="1" minOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_engine">
+        <xs:sequence>
+            <xs:element name="manufacter"></xs:element>
+            <xs:element name="ice" type="type_ice"></xs:element>
+            <xs:element name="hybrid" type="type_hybrid"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="engine_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="type_engines">
+        <xs:sequence>
+            <xs:element name="engine" type="type_engine" minOccurs="4" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- TEAMS -->
+
+    <xs:complexType name="type_budget">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="currency"></xs:attribute>
+                <xs:attribute ref="unit"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="type_amount">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="unit"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="type_staff">
+        <xs:sequence>
+            <xs:element name="amount" type="type_amount"></xs:element>
+            <xs:element name="technical_director" type="xs:string"></xs:element>
+            <xs:element name="strategist" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_car">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="car_engine" type="type_refid"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_team">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="principal" type="xs:string"></xs:element>
+            <xs:element name="nationality" type="type_country"></xs:element>
+            <xs:element name="budget" type="type_budget"></xs:element>
+            <xs:element name="driver_titles" type="xs:nonNegativeInteger"></xs:element>
+            <xs:element name="constructor_titles" type="xs:nonNegativeInteger"></xs:element>
+            <xs:element name="staff" type="type_staff"></xs:element>
+            <xs:element name="car" type="type_car"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="type_teams">
+        <xs:sequence>
+            <xs:element name="team" type="type_team" minOccurs="10" maxOccurs="10"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- DRIVERS -->
+    <xs:complexType name="type_driver">
+        <xs:sequence>
+            <xs:element name="driver_team" type="type_refid"></xs:element>
+            <xs:element name="first_name" type="xs:string"></xs:element>
+            <xs:element name="last_name" type="xs:string"></xs:element>
+            <xs:element name="nationality" type="type_country"></xs:element>
+            <xs:element name="championship_titles" type="xs:nonNegativeInteger"></xs:element>
+            <xs:element name="poles" type="xs:nonNegativeInteger"></xs:element>
+            <xs:element name="race_wins" type="xs:nonNegativeInteger"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="type_drivers">
+        <xs:sequence>
+            <xs:element name="driver" type="type_driver" minOccurs="20" maxOccurs="20"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- CIRCUITS -->
+
+    <xs:complexType name="type_localization">
+        <xs:sequence>
+            <xs:element name="city" type="xs:string"></xs:element>
+            <xs:element name="country" type="type_country"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_circuit">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="type" type="xs:string"></xs:element>
+            <xs:element name="direction" type="xs:string"></xs:element>
+            <xs:element name="length" type="type_unit"></xs:element>
+            <xs:element name="turns" type="xs:positiveInteger"></xs:element>
+            <xs:element name="localization" type="type_localization"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="type_circuits">
+        <xs:sequence>
+            <xs:element name="circuit" type="type_circuit" minOccurs="21" maxOccurs="21"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- ROOT -->
+
+    <xs:complexType name="type_formula1">
+        <xs:sequence>
+            <xs:element name="engines" type="type_engines"></xs:element>
+            <xs:element name="teams" type="type_teams"></xs:element>
+            <xs:element name="drivers" type="type_drivers"></xs:element>
+            <xs:element name="circuits" type="type_circuits"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="formula1" type="type_formula1">
+        <!-- CAR-ENGINE ref -->
+        <xs:key name="engine_key">
+            <xs:selector xpath=".//engines/engine"></xs:selector>
+            <xs:field xpath="@engine_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="car_engine_ref" refer="engine_key">
+            <xs:selector xpath=".//teams/team/car/car_engine"></xs:selector>
+            <xs:field xpath="@refid"></xs:field>
+        </xs:keyref>
+        <!-- DRIVER-TEAM ref -->
+        <xs:key name="team_key">
+            <xs:selector xpath=".//teams/team"></xs:selector>
+            <xs:field xpath="@id"></xs:field>
+        </xs:key>
+        <xs:keyref name="driver_team_ref" refer="team_key">
+            <xs:selector xpath=".//drivers/driver/driver_team"></xs:selector>
+            <xs:field xpath="@refid"></xs:field>
+        </xs:keyref>
+    </xs:element>
+
+</xs:schema>

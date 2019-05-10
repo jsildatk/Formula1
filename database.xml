@@ -3,7 +3,7 @@
 <!DOCTYPE formula1 SYSTEM "database.dtd">
 <formula1>
     <engines>
-        <engine id="E_MER">
+        <engine engine_id="E_MER">
             <manufacter>Mercedes</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -13,10 +13,10 @@
             </ice>
             <hybrid>
                 <mgu-k>
-                    <power unit="kW">120</power>
+                    <power energy_unit="kW">120</power>
                     <max_rpm>50000</max_rpm>
-                    <recovered_energy unit="MJ">2</recovered_energy>
-                    <released_energy unit="MJ">4</released_energy>
+                    <recovered_energy energy_unit="MJ">2</recovered_energy>
+                    <released_energy energy_unit="MJ">4</released_energy>
                 </mgu-k>
                 <mgu-h>
                     <max_rpm>100000</max_rpm>
@@ -24,7 +24,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="E_FER">
+        <engine engine_id="E_FER">
             <manufacter>Ferrari</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -34,10 +34,10 @@
             </ice>
             <hybrid>
                 <mgu-k>
-                    <power unit="kW">140</power>
+                    <power energy_unit="kW">140</power>
                     <max_rpm>50000</max_rpm>
-                    <recovered_energy unit="MJ">2</recovered_energy>
-                    <released_energy unit="MJ">4</released_energy>
+                    <recovered_energy energy_unit="MJ">2</recovered_energy>
+                    <released_energy energy_unit="MJ">4</released_energy>
                 </mgu-k>
                 <mgu-h>
                     <max_rpm>100000</max_rpm>
@@ -45,7 +45,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="E_HON">
+        <engine engine_id="E_HON">
             <manufacter>Honda</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -55,10 +55,10 @@
             </ice>
             <hybrid>
                 <mgu-k>
-                    <power unit="kW">110</power>
+                    <power energy_unit="kW">110</power>
                     <max_rpm>50000</max_rpm>
-                    <recovered_energy unit="MJ">2</recovered_energy>
-                    <released_energy unit="MJ">4</released_energy>
+                    <recovered_energy energy_unit="MJ">2</recovered_energy>
+                    <released_energy energy_unit="MJ">4</released_energy>
                 </mgu-k>
                 <mgu-h>
                     <max_rpm>100000</max_rpm>
@@ -66,7 +66,7 @@
                 </mgu-h>
             </hybrid>
         </engine>
-        <engine id="E_REN">
+        <engine engine_id="E_REN">
             <manufacter>Renault</manufacter>
             <ice>
                 <displacement>1.6L V6</displacement>
@@ -76,10 +76,10 @@
             </ice>
             <hybrid>
                 <mgu-k>
-                    <power unit="kW">98</power>
+                    <power energy_unit="kW">98</power>
                     <max_rpm>50000</max_rpm>
-                    <recovered_energy unit="MJ">2</recovered_energy>
-                    <released_energy unit="MJ">4</released_energy>
+                    <recovered_energy energy_unit="MJ">2</recovered_energy>
+                    <released_energy energy_unit="MJ">4</released_energy>
                 </mgu-k>
                 <mgu-h>
                     <max_rpm>100000</max_rpm>
@@ -408,7 +408,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="KVY">
-            <driver_team refid="STR"></driver_team>
+            <driver_team refid="TRH"></driver_team>
             <first_name>Daniil</first_name>
             <last_name>Kvyat</last_name>
             <nationality code="RUS">Russia</nationality>
@@ -417,7 +417,7 @@
             <race_wins>0</race_wins>
         </driver>
         <driver id="ALB">
-            <driver_team refid="STR"></driver_team>
+            <driver_team refid="TRH"></driver_team>
             <first_name>Alexander</first_name>
             <last_name>Albon</last_name>
             <nationality code="THA">Thailand</nationality>
