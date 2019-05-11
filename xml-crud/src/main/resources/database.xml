@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formula1> 
+  <engines> 
+    <engine engine_id="E_MER"> 
+      <manufacter>Mercedes</manufacter>  
+      <ice> 
+        <displacement>1.6L V6</displacement>  
+        <cylinders>6</cylinders>  
+        <horse_power>700</horse_power>  
+        <max_rpm>15000</max_rpm> 
+      </ice>  
+      <hybrid> 
+        <mgu-k> 
+          <power energy_unit="kW">120</power>  
+          <max_rpm>50000</max_rpm>  
+          <recovered_energy energy_unit="MJ">2</recovered_energy>  
+          <released_energy energy_unit="MJ">4</released_energy> 
+        </mgu-k>  
+        <mgu-h> 
+          <max_rpm>100000</max_rpm>  
+          <recovered_energy>unlimited</recovered_energy> 
+        </mgu-h> 
+      </hybrid> 
+    </engine>  
+    <engine engine_id="E_FER"> 
+      <manufacter>BMW</manufacter>  
+      <ice> 
+        <displacement>1.6L V6</displacement>  
+        <cylinders>6</cylinders>  
+        <horse_power>730</horse_power>  
+        <max_rpm>15000</max_rpm> 
+      </ice>  
+      <hybrid> 
+        <mgu-k> 
+          <power energy_unit="kW">140</power>  
+          <max_rpm>50000</max_rpm>  
+          <recovered_energy energy_unit="MJ">2</recovered_energy>  
+          <released_energy energy_unit="MJ">4</released_energy> 
+        </mgu-k>  
+        <mgu-h> 
+          <max_rpm>100000</max_rpm>  
+          <recovered_energy>unlimited</recovered_energy> 
+        </mgu-h> 
+      </hybrid> 
+    </engine>  
+    <engine engine_id="E_HON"> 
+      <manufacter>Honda</manufacter>  
+      <ice> 
+        <displacement>1.6L V6</displacement>  
+        <cylinders>6</cylinders>  
+        <horse_power>680</horse_power>  
+        <max_rpm>15000</max_rpm> 
+      </ice>  
+      <hybrid> 
+        <mgu-k> 
+          <power energy_unit="kW">110</power>  
+          <max_rpm>50000</max_rpm>  
+          <recovered_energy energy_unit="MJ">2</recovered_energy>  
+          <released_energy energy_unit="MJ">4</released_energy> 
+        </mgu-k>  
+        <mgu-h> 
+          <max_rpm>100000</max_rpm>  
+          <recovered_energy>unlimited</recovered_energy> 
+        </mgu-h> 
+      </hybrid> 
+    </engine>  
+    <engine engine_id="E_REN"> 
+      <manufacter>Renault</manufacter>  
+      <ice> 
+        <displacement>1.6L V6</displacement>  
+        <cylinders>6</cylinders>  
+        <horse_power>650</horse_power>  
+        <max_rpm>15000</max_rpm> 
+      </ice>  
+      <hybrid> 
+        <mgu-k> 
+          <power energy_unit="kW">98</power>  
+          <max_rpm>50000</max_rpm>  
+          <recovered_energy energy_unit="MJ">2</recovered_energy>  
+          <released_energy energy_unit="MJ">4</released_energy> 
+        </mgu-k>  
+        <mgu-h> 
+          <max_rpm>100000</max_rpm>  
+          <recovered_energy>unlimited</recovered_energy> 
+        </mgu-h> 
+      </hybrid> 
+    </engine>  
+    <engine engine_id="E_NEW">
+      <manufacter>Manufacter</manufacter>
+      <ice>
+        <displacement>1.6 V6</displacement>
+        <cylinders>6</cylinders>
+        <horse_power>800</horse_power>
+        <max_rpm>15000</max_rpm>
+      </ice>
+      <hybrid>
+        <mgu-k>
+          <power energy_unit="kW">180</power>
+          <max_rpm>50000</max_rpm>
+          <recovered_energy energy_unit="MJ">2</recovered_energy>
+          <released_energy energy_unit="MJ">4</released_energy>
+        </mgu-k>
+        <mgu-h>
+          <max_rpm>1000000</max_rpm>
+          <recovered_energy>unlimited</recovered_energy>
+        </mgu-h>
+      </hybrid>
+    </engine>
+  </engines>  
+  <teams> 
+    <team id="MER"> 
+      <name>Mercedes AMG Petronas</name>  
+      <principal>Toto Wolff</principal>  
+      <nationality code="GER">Germany</nationality>  
+      <budget currency="$" unit="million">450</budget>  
+      <driver_titles>7</driver_titles>  
+      <constructor_titles>5</constructor_titles>  
+      <staff> 
+        <amount unit="person">1400</amount>  
+        <technical_director>James Allison</technical_director>  
+        <strategist>James Vowles</strategist> 
+      </staff>  
+      <car> 
+        <name>W10 EQ Power+</name>  
+        <car_engine refid="E_MER"/> 
+      </car> 
+    </team>  
+    <team id="FER"> 
+      <name>Scuderia Ferrari</name>  
+      <principal>Mattia Binotto</principal>  
+      <nationality code="ITA">Italy</nationality>  
+      <budget currency="€" unit="million">542</budget>  
+      <driver_titles>15</driver_titles>  
+      <constructor_titles>16</constructor_titles>  
+      <staff> 
+        <amount unit="person">1000</amount>  
+        <technical_director>Mattia Binotto</technical_director>  
+        <strategist>Jock Clear</strategist> 
+      </staff>  
+      <car> 
+        <name>SF90</name>  
+        <car_engine refid="E_FER"/> 
+      </car> 
+    </team>  
+    <team id="RBR"> 
+      <name>Aston Martin Red Bull Racing</name>  
+      <principal>Christian Horner</principal>  
+      <nationality code="AUT">Austria</nationality>  
+      <budget currency="€" unit="million">350</budget>  
+      <driver_titles>4</driver_titles>  
+      <constructor_titles>4</constructor_titles>  
+      <staff> 
+        <amount unit="person">650</amount>  
+        <technical_director>Adrian Newey</technical_director>  
+        <strategist>Ruth Buscombe</strategist> 
+      </staff>  
+      <car> 
+        <name>RB15</name>  
+        <car_engine refid="E_HON"/> 
+      </car> 
+    </team>  
+    <team id="REN"> 
+      <name>Renault Sport F1</name>  
+      <principal>Cyril Abiteboul</principal>  
+      <nationality code="FRA">France</nationality>  
+      <budget currency="€" unit="million">300</budget>  
+      <driver_titles>2</driver_titles>  
+      <constructor_titles>2</constructor_titles>  
+      <staff> 
+        <amount unit="person">800</amount>  
+        <technical_director>Bob Bell</technical_director>  
+        <strategist>Nick Chester</strategist> 
+      </staff>  
+      <car> 
+        <name>R.S.19</name>  
+        <car_engine refid="E_REN"/> 
+      </car> 
+    </team>  
+    <team id="HAA"> 
+      <name>Haas F1 Team</name>  
+      <principal>Gunther Steiner</principal>  
+      <nationality code="USA">United States</nationality>  
+      <budget currency="€" unit="million">110</budget>  
+      <driver_titles>0</driver_titles>  
+      <constructor_titles>0</constructor_titles>  
+      <staff> 
+        <amount unit="person">212</amount>  
+        <technical_director>Andy Cowell</technical_director>  
+        <strategist>Simone Resta</strategist> 
+      </staff>  
+      <car> 
+        <name>VF-19</name>  
+        <car_engine refid="E_FER"/> 
+      </car> 
+    </team>  
+    <team id="MCL"> 
+      <name>McLaren</name>  
+      <principal>Gil de Ferran</principal>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <budget currency="€" unit="million">250</budget>  
+      <driver_titles>12</driver_titles>  
+      <constructor_titles>8</constructor_titles>  
+      <staff> 
+        <amount unit="person">750</amount>  
+        <technical_director>Jonathan Neale</technical_director>  
+        <strategist>Matt Morris</strategist> 
+      </staff>  
+      <car> 
+        <name>MCL34</name>  
+        <car_engine refid="E_REN"/> 
+      </car> 
+    </team>  
+    <team id="SRP"> 
+      <name>Sport Pesa Racing Point</name>  
+      <principal>Otmar Szafnauer</principal>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <budget currency="€" unit="million">110</budget>  
+      <driver_titles>0</driver_titles>  
+      <constructor_titles>0</constructor_titles>  
+      <staff> 
+        <amount unit="person">400</amount>  
+        <technical_director>Andrew Green</technical_director>  
+        <strategist>Tom McCullough</strategist> 
+      </staff>  
+      <car> 
+        <name>RP19</name>  
+        <car_engine refid="E_MER"/> 
+      </car> 
+    </team>  
+    <team id="ARR"> 
+      <name>Alfa Romeo Racing</name>  
+      <principal>Frideric Vasseur</principal>  
+      <nationality code="SWI">Switzerland</nationality>  
+      <budget currency="€" unit="million">135</budget>  
+      <driver_titles>2</driver_titles>  
+      <constructor_titles>0</constructor_titles>  
+      <staff> 
+        <amount unit="person">430</amount>  
+        <technical_director>Andy Stevenson</technical_director>  
+        <strategist>Steve Curnow</strategist> 
+      </staff>  
+      <car> 
+        <name>C38</name>  
+        <car_engine refid="E_FER"/> 
+      </car> 
+    </team>  
+    <team id="TRH"> 
+      <name>Scuderia Toro Rosso Honda</name>  
+      <principal>Franz Tost</principal>  
+      <nationality code="ITA">Italy</nationality>  
+      <budget currency="€" unit="million">125</budget>  
+      <driver_titles>0</driver_titles>  
+      <constructor_titles>0</constructor_titles>  
+      <staff> 
+        <amount unit="person">500</amount>  
+        <technical_director>Tim Goss</technical_director>  
+        <strategist>Peter Prodromou</strategist> 
+      </staff>  
+      <car> 
+        <name>STR14</name>  
+        <car_engine refid="E_HON"/> 
+      </car> 
+    </team>  
+    <team id="RWR"> 
+      <name>ROKIT Williams Racing</name>  
+      <principal>Claire Williams</principal>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <budget currency="€" unit="million">135</budget>  
+      <driver_titles>7</driver_titles>  
+      <constructor_titles>9</constructor_titles>  
+      <staff> 
+        <amount unit="person">712</amount>  
+        <technical_director>Paddy Lowe</technical_director>  
+        <strategist>Dave Robson</strategist> 
+      </staff>  
+      <car> 
+        <name>FW42</name>  
+        <car_engine refid="E_MER"/> 
+      </car> 
+    </team> 
+  </teams>  
+  <drivers> 
+    <driver id="HAM"> 
+      <driver_team refid="MER"/>  
+      <first_name>Lewis</first_name>  
+      <last_name>Hamilton</last_name>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <championship_titles>5</championship_titles>  
+      <poles>84</poles>  
+      <race_wins>75</race_wins> 
+    </driver>  
+    <driver id="BOT"> 
+      <driver_team refid="MER"/>  
+      <first_name>Valtteri</first_name>  
+      <last_name>Bottas</last_name>  
+      <nationality code="FIN">Finland</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>8</poles>  
+      <race_wins>5</race_wins> 
+    </driver>  
+    <driver id="VET"> 
+      <driver_team refid="FER"/>  
+      <first_name>Sebastian</first_name>  
+      <last_name>Vettel</last_name>  
+      <nationality code="GER">Germany</nationality>  
+      <championship_titles>4</championship_titles>  
+      <poles>55</poles>  
+      <race_wins>52</race_wins> 
+    </driver>  
+    <driver id="LEC"> 
+      <driver_team refid="FER"/>  
+      <first_name>Charles</first_name>  
+      <last_name>Leclerc</last_name>  
+      <nationality code="MON">Monaco</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>1</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="VER"> 
+      <driver_team refid="RBR"/>  
+      <first_name>Max</first_name>  
+      <last_name>Verstappen</last_name>  
+      <nationality code="NLD">Netherlands</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>5</race_wins> 
+    </driver>  
+    <driver id="GAS"> 
+      <driver_team refid="RBR"/>  
+      <first_name>Pierre</first_name>  
+      <last_name>Gasly</last_name>  
+      <nationality code="FRA">France</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="RIC"> 
+      <driver_team refid="REN"/>  
+      <first_name>Daniel</first_name>  
+      <last_name>Ricciardo</last_name>  
+      <nationality code="AUS">Australia</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>3</poles>  
+      <race_wins>7</race_wins> 
+    </driver>  
+    <driver id="HUL"> 
+      <driver_team refid="REN"/>  
+      <first_name>Nico</first_name>  
+      <last_name>Hulkenberg</last_name>  
+      <nationality code="GER">Germany</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>1</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="GRO"> 
+      <driver_team refid="HAA"/>  
+      <first_name>Romain</first_name>  
+      <last_name>Grosjean</last_name>  
+      <nationality code="FRA">France</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="MAG"> 
+      <driver_team refid="HAA"/>  
+      <first_name>Kevin</first_name>  
+      <last_name>Magnussen</last_name>  
+      <nationality code="DEN">Dennmark</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="SAI"> 
+      <driver_team refid="MCL"/>  
+      <first_name>Carlos</first_name>  
+      <last_name>Sainz</last_name>  
+      <nationality code="ESP">Spain</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="NOR"> 
+      <driver_team refid="MCL"/>  
+      <first_name>Lando</first_name>  
+      <last_name>Norris</last_name>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="PER"> 
+      <driver_team refid="SRP"/>  
+      <first_name>Sergio</first_name>  
+      <last_name>Perez</last_name>  
+      <nationality code="MEX">Mexico</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="STR"> 
+      <driver_team refid="SRP"/>  
+      <first_name>Lance</first_name>  
+      <last_name>Stroll</last_name>  
+      <nationality code="CAN">Canada</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="RAI"> 
+      <driver_team refid="ARR"/>  
+      <first_name>Kimi</first_name>  
+      <last_name>Raikkonen</last_name>  
+      <nationality code="FIN">Finland</nationality>  
+      <championship_titles>1</championship_titles>  
+      <poles>18</poles>  
+      <race_wins>21</race_wins> 
+    </driver>  
+    <driver id="GIO"> 
+      <driver_team refid="ARR"/>  
+      <first_name>Antonio</first_name>  
+      <last_name>Giovinazzi</last_name>  
+      <nationality code="ITA">Italy</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="KVY"> 
+      <driver_team refid="TRH"/>  
+      <first_name>Daniil</first_name>  
+      <last_name>Kvyat</last_name>  
+      <nationality code="RUS">Russia</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="ALB"> 
+      <driver_team refid="TRH"/>  
+      <first_name>Alexander</first_name>  
+      <last_name>Albon</last_name>  
+      <nationality code="THA">Thailand</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver>  
+    <driver id="KUB"> 
+      <driver_team refid="RWR"/>  
+      <first_name>Robert</first_name>  
+      <last_name>Kubica</last_name>  
+      <nationality code="POL">Poland</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>1</poles>  
+      <race_wins>1</race_wins> 
+    </driver>  
+    <driver id="RUS"> 
+      <driver_team refid="RWR"/>  
+      <first_name>George</first_name>  
+      <last_name>Russel</last_name>  
+      <nationality code="GBR">Great Britian</nationality>  
+      <championship_titles>0</championship_titles>  
+      <poles>0</poles>  
+      <race_wins>0</race_wins> 
+    </driver> 
+  </drivers>  
+  <circuits> 
+    <circuit id="APC"> 
+      <name>Albert Park Circuit</name>  
+      <type>street</type>  
+      <direction>right</direction>  
+      <length unit="km">5.303</length>  
+      <turns>16</turns>  
+      <localization> 
+        <city>Melbourne</city>  
+        <country code="AUS">Australia</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="BIC"> 
+      <name>Bahrain International Circuit</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">5.412</length>  
+      <turns>15</turns>  
+      <localization> 
+        <city>Manama</city>  
+        <country code="BHR">Bahrain</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="BCC"> 
+      <name>Baku City Circuit</name>  
+      <type>street</type>  
+      <direction>left</direction>  
+      <length unit="km">6.006</length>  
+      <turns>20</turns>  
+      <localization> 
+        <city>Baku</city>  
+        <country code="AZE">Azerbaijan</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="CBC"> 
+      <name>Circuit de Barcelona-Catalunya</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">4.655</length>  
+      <turns>16</turns>  
+      <localization> 
+        <city>Montmelo</city>  
+        <country code="AZE">Azerbaijan</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="COA"> 
+      <name>Circuit of the Americas</name>  
+      <type>constant</type>  
+      <direction>left</direction>  
+      <length unit="km">5.513</length>  
+      <turns>20</turns>  
+      <localization> 
+        <city>Austin</city>  
+        <country code="USA">United States</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="CGV"> 
+      <name>Circuit Gilles Villeneuve</name>  
+      <type>street</type>  
+      <direction>right</direction>  
+      <length unit="km">4.361</length>  
+      <turns>14</turns>  
+      <localization> 
+        <city>Montreal</city>  
+        <country code="CAN">Canada</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="AHR"> 
+      <name>Autodromo Hermanos Rodriguez</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">4.304</length>  
+      <turns>14</turns>  
+      <localization> 
+        <city>Mexico City</city>  
+        <country code="MEX">Mexico</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="HMG"> 
+      <name>Hockenheimring</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">4.574</length>  
+      <turns>13</turns>  
+      <localization> 
+        <city>Hockenheim</city>  
+        <country code="GER">Germany</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="HOG"> 
+      <name>Hungaroring</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">4.381</length>  
+      <turns>14</turns>  
+      <localization> 
+        <city>Budapest</city>  
+        <country code="HUN">Hungary</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="MSC"> 
+      <name>Marina Bay Street Circuit</name>  
+      <type>street</type>  
+      <direction>left</direction>  
+      <length unit="km">5.065</length>  
+      <turns>23</turns>  
+      <localization> 
+        <city>Singapore</city>  
+        <country code="SGP">Singapore</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="CDM"> 
+      <name>Circuit de Monaco</name>  
+      <type>street</type>  
+      <direction>right</direction>  
+      <length unit="km">3.337</length>  
+      <turns>19</turns>  
+      <localization> 
+        <city>Monaco</city>  
+        <country code="MON">Monaco</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="ANM"> 
+      <name>Autodromo Nazionale di Monza</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">5.793</length>  
+      <turns>11</turns>  
+      <localization> 
+        <city>Monza</city>  
+        <country code="ITA">Italy</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="CPR"> 
+      <name>Circuit Paul Ricard</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">5.800</length>  
+      <turns>10</turns>  
+      <localization> 
+        <city>Le Castellet</city>  
+        <country code="FRA">France</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="RBB"> 
+      <name>Red Bull Ring</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">4.326</length>  
+      <turns>8</turns>  
+      <localization> 
+        <city>Spielberg</city>  
+        <country code="AUT">Austria</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="SIC"> 
+      <name>Shanghai International Circuit</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">5.451</length>  
+      <turns>16</turns>  
+      <localization> 
+        <city>Shanghai</city>  
+        <country code="CHN">China</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="SRC"> 
+      <name>Silverstone Circiut</name>  
+      <type>constant</type>  
+      <direction>right</direction>  
+      <length unit="km">5.891</length>  
+      <turns>20</turns>  
+      <localization> 
+        <city>Silverstone</city>  
+        <country code="GBR">Great Britian</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="SOA"> 
+      <name>Sochi Autdrom</name>  
+      <type>mixed</type>  
+      <direction>right</direction>  
+      <length unit="km">5.848</length>  
+      <turns>19</turns>  
+      <localization> 
+        <city>Sochi</city>  
+        <country code="RUS">Russia</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="CSF"> 
+      <name>Circiut de Spa-Francorchamps</name>  
+      <type>mixed</type>  
+      <direction>right</direction>  
+      <length unit="km">7.004</length>  
+      <turns>21</turns>  
+      <localization> 
+        <city>Stavelot</city>  
+        <country code="BEL">Belgium</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="SIR"> 
+      <name>Suzuka International Racing Course</name>  
+      <type>constant</type>  
+      <direction>both</direction>  
+      <length unit="km">5.807</length>  
+      <turns>17</turns>  
+      <localization> 
+        <city>Suzuka</city>  
+        <country code="JPN">Japan</country> 
+      </localization> 
+    </circuit>  
+    <circuit id="YMC"> 
+      <name>Yas Marina Circiut</name>  
+      <type>constant</type>  
+      <direction>left</direction>  
+      <length unit="km">5.554</length>  
+      <turns>21</turns>  
+      <localization> 
+        <city>Abu Dhabi</city>  
+        <country code="UAE">United Arab Emirates</country> 
+      </localization> 
+    </circuit> 
+  </circuits> 
+</formula1>
