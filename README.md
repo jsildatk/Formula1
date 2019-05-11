@@ -1,4 +1,4 @@
-#FORMULA1
+# FORMULA1
 XML project about Formula1 using DTD, XSD, XSLT, Java.
 ## VALIDATION
 1) XML: ``` xmllint --noout database.xml ```
